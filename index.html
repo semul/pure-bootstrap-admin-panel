@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CarWash POS - Management Software</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
+		<style>
+      body{
+        font-family: "Roboto Mono", sans-serif;
+        background: #c3c3c3;
+      }
+      .navbar {
+        border-radius: 0;
+      }
+      .display .item{
+        text-align: center;
+      }
+    </style>
+	</head>
+	<body>
+		<div class="container" style="background: #fff;">
+			<div class="row">
+				<header>
+					<nav class="navbar navbar-inverse">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="#">CarWash POS</a>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="#">Schedules <span class="sr-only">(current)</span></a></li>
+									<li><a href="#">Branches</a></li>
+									<li><a href="#">Staffs</a></li>
+								</ul>
+								<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Profile</a></li>
+											<li><a href="#">Settings</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">Logout</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</div><!-- /.container-fluid -->
+					</nav>
+				</header>
+				<div class="display">
+					<div class="col-md-3">
+						<div class="item">
+							<div class="panel panel-info">
+								<!-- Default panel contents -->
+								<div class="panel-heading">Waiting</div>
+								<div class="panel-body">
+									<span class="badge">4</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="item">
+							<div class="panel panel-warning">
+								<!-- Default panel contents -->
+								<div class="panel-heading">On Going</div>
+								<div class="panel-body">
+									<span class="badge">4</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="item">
+							<div class="panel panel-success">
+								<!-- Default panel contents -->
+								<div class="panel-heading">Delivered</div>
+								<div class="panel-body">
+									<span class="badge">4</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="item">
+							<div class="panel panel-danger">
+								<!-- Default panel contents -->
+								<div class="panel-heading">No Show!</div>
+								<div class="panel-body">
+									<span class="badge">4</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="schedules">
+					<div class="col-md-8">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th colspan="4" class="active info">Schedule Today</th>
+								</tr>
+								<tr>
+									<th>Token</th>
+									<th>Vehicle Manufacturer</th>
+									<th>Vehicle Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Honda</td>
+									<td>Sedan</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Toyota</td>
+									<td>SUV</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>BMW</td>
+									<td>Sedan</td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td>Nissan</td>
+									<td>MPV</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Honda</td>
+									<td>Sedan</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Toyota</td>
+									<td>SUV</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>BMW</td>
+									<td>Sedan</td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td>Nissan</td>
+									<td>MPV</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-success">
+							<!-- Default panel contents -->
+							<div class="panel-heading">Add Schedule</div>
+								<div class="panel-body">
+									<form>
+										<div class="form-group">
+											<label for="plate">Vehicle Registration Number</label>
+											<input type="text" class="form-control" id="plate" placeholder="WB4594X">
+										</div>
+										<div class="form-group">
+											<label for="manufacturers">Vehicle Manufacturer</label>
+											<input type="text" class="form-control" id="manufacturers" placeholder="Toyota">
+										</div>
+										<div class="form-group">
+											<label for="manufacturers">Vehicle Type</label>
+											<select name="manufacturers" id="manufacturers" class="form-control">
+												<option value="0">None</option>
+												<option value="1">Sedan</option>
+												<option value="2">MPV</option>
+												<option value="3">SUV</option>
+												<option value="4">Truck</option>
+											</select>
+										</div>
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" checked="true"> Vacuum 
+										</label>
+										</div>
+										<button type="submit" class="btn btn-primary">Get Token</button>
+									</form>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="padding" style="padding: 10em 0"></div>
+				</div>
+
+				<div class="copyrights" style="background: #333; padding: 0.5em 0; color: #fff">
+					<p class="text-center" style="margin-bottom: 0; font-size: 10px;">Designed & Developed By <a href="https://www.exoncreative.com" style="color: #fff">Exon Creative</a></p>
+				</div>
+			</div>
+		</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
